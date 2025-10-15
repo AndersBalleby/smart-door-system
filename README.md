@@ -25,6 +25,7 @@ Resultatet vises på LCD-displayet — fx “Velkommen hjem” ved godkendt kort
 ### 🔹 Synsmodel til færdige produkt
 <img width="355" height="371" alt="Arduino og servo" src="https://github.com/user-attachments/assets/5fe01d1e-beae-4e68-8cc4-4be370239189" />
 <img width="475" height="450" alt="Face recognition" src="https://github.com/user-attachments/assets/e3db1017-e812-4720-8e8a-bd97466a7951" />
+
 Synsmodellen kræver forbindelse til kameraet igennem Bluetooth, men denne del blev aldrig udviklet.
 
 ---
