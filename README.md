@@ -1,10 +1,10 @@
-# 🔐 Smart Door Access System
-Et **smart adgangssystem** udviklet som Teknologi B-projekt på HTX Holstebro i 2023.  
-Systemet kombinerer **ansigtsgenkendelse** og **RFID** for at åbne en dør automatisk, og demonstrerer samspillet mellem **Arduino** og **Python** i et IoT-lignende miljø.
+# Smart Door Access System
+Et **smart adgangssystem** udviklet som eksamensprojekt i Teknologi B på HTX Holstebro i 2023.  
+Systemet kombinerer **ansigtsgenkendelse** og **RFID** for at åbne en dør automatisk.
 
 ---
 
-## 🧠 Projektbeskrivelse
+## Projektbeskrivelse
 Projektet er designet til at give brugere adgang til en dør ved enten:
 - At **scanne et godkendt RFID-kort**, eller  
 - At blive **genkendt via kamera** med ansigtsgenkendelse.
@@ -14,7 +14,7 @@ Arduino’en viser samtidig status på et **LCD-display**.
 
 ---
 
-### 🔹 Prototype og funktionsmodel
+### Prototype og funktionsmodel
 <img width="342" height="456" alt="RFID og LCD" src="https://github.com/user-attachments/assets/47b3867b-5bbf-40e2-88b5-dc938bf7f6ed" />
 
 RFID-læseren registrerer brugerens kort og sender ID’et til Arduino’en, som afgør, om det er et godkendt tag.  
@@ -22,7 +22,7 @@ Resultatet vises på LCD-displayet — fx “Velkommen hjem” ved godkendt kort
 
 ---
 
-### 🔹 Synsmodel til færdige produkt
+### Synsmodel til færdige produkt
 <img width="355" height="371" alt="Arduino og servo" src="https://github.com/user-attachments/assets/5fe01d1e-beae-4e68-8cc4-4be370239189" />
 <img width="475" height="450" alt="Face recognition" src="https://github.com/user-attachments/assets/e3db1017-e812-4720-8e8a-bd97466a7951" />
 
@@ -30,19 +30,19 @@ Synsmodellen kræver forbindelse til kameraet igennem Bluetooth, men denne del b
 
 ---
 
-## ⚙️ Funktioner
-- 🔑 RFID-baseret adgang via kort
-- 👁️ Ansigtsgenkendelse med kamera
-- 📟 LCD-display med feedback til brugeren
-- ⚡ Kommunikation mellem Python og Arduino via Serial
-- 🔒 Servo-styret låsemekanisme
+## Funktioner
+- RFID-baseret adgang via kort
+- Ansigtsgenkendelse med kamera
+- LCD-display med feedback til brugeren
+- Kommunikation mellem Python og Arduino via Serial
+- Servo-styret låsemekanisme
 
 ---
 
-## 🧰 Brugte teknologier
+## Benyttede Teknologier
 
 ### **Hardware**
-- Arduino Uno (eller tilsvarende)
+- Arduino Uno (med bluetooth modul)
 - RC522 RFID-læser
 - Servo-motor
 - I2C LCD-display
@@ -52,7 +52,6 @@ Synsmodellen kræver forbindelse til kameraet igennem Bluetooth, men denne del b
 ### **Software & Biblioteker**
 #### **Arduino**
 - `SoftwareSerial.h`
-
 - `LiquidCrystal_I2C.h`
 - `Servo.h`
 
@@ -64,13 +63,10 @@ Synsmodellen kræver forbindelse til kameraet igennem Bluetooth, men denne del b
 
 ---
 
-## ⚠️ Disclaimer
-Dette projekt er udviklet til **undervisnings- og demonstrationsformål**.  
+## Disclaimer 
 Koden er tilpasset en specifik hardwareopsætning og fungerer **ikke uden ændringer**.  
 Hvis du ønsker at bruge projektet, skal du tilpasse:
 - Portnavne i Python-filen (`SerialConnector`)  
 - RFID-tags og registrerede brugere  
 - Pin-konfigurationer i Arduino-koden  
 - Filstier og billeder til ansigtsgenkendelse  
-
-Projektet er derfor ikke “plug-and-play”, men kan bruges som udgangspunkt for videreudvikling.
